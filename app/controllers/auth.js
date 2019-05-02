@@ -62,7 +62,9 @@ const saveUserAccessAndReturnToken = async (req, user) => {
       // Returns data with access token
       resolve({
         token: generateToken(user._id),
-        user: userInfo
+        user: userInfo,
+        status:'success',
+        message:'You are logged sucessfully'
       })
     })
   })
